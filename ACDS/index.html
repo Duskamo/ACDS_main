@@ -7,13 +7,13 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Jumbotron Template · Bootstrap</title>
+    <title>Advanced Company Deterrent System - Home</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/jumbotron/">
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css">
 
     <style>
       .bd-placeholder-img {
@@ -36,7 +36,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">ACDS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -47,18 +47,7 @@
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
+        <a class="nav-link" href="#">Desktop App</a>
       </li>
     </ul>
   </div>
@@ -69,24 +58,58 @@
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
     <div class="container">
-      <h1 class="display-3">Hello, world!</h1>
-      <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+    <div class="row form-group">
+      <h1 class="display-4 text-primary">Advanced Company Deterrent System</h1> 
+    </div>
+    <div class="row form-group wakelock-content">
+      <label><input type="checkbox" id="wakeLockCheckbox"> Prevent <code>screen</code> from going away</label>
+    </div>
+    <div class="row form-group wakelock-content">
+      <label><input type="checkbox" id="reacquireCheckbox"> Re-Acquire <code>screen</code> Wake Lock On Visibility Changes</label>
+    </div>
+    <div class="row form-group wakelock-content">
+      <button id="fullScreenButton" type="button" class="btn btn-primary">Go Incognito</button>
+    </div>
+    <div id="statusDiv"></div>
+
     </div>
   </div>
 
   <div class="container">
-    <h1>Screen Wake Lock Demo</h1>    
-    <div>
-      <label><input type="checkbox" id="wakeLockCheckbox"> Activate <code>screen</code> Wake Lock</label>
-    </div>    
-    <div>    
-      <label><input type="checkbox" id="reacquireCheckbox"> Re-Acquire <code>screen</code> Wake Lock On Visibility Changes</label>
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Site Usage</h2>
+	<p><strong>Select checkbox and keep this page open and in view.</strong></p>
+	<p>
+	<ul class="list-group lg-ol">
+          <li class="list-group-item lg-ol-item">Navigate to this site</li>
+          <li class="list-group-item lg-ol-item">Select 'Prevent screen' checkbox</li>
+          <li class="list-group-item lg-ol-item">Keep focus on this web page</li>
+	  <li class="list-group-item lg-ol-item">Click 'Go Incognito' button</li>
+        </ul>
+	</p>
+      </div>
+      <div class="col-md-4">
+        <h2>Desktop App</h2>
+	<p><strong>Download our <i>free desktop app</i> to get access to many more features.</strong></p>
+	<p>
+        <ul class="list-group">
+          <li class="list-group-item">Set random away time intervals</li>
+	  <li class="list-group-item">Wakelock API on native app</li>
+          <li class="list-group-item">Custom mouse and keyboard control</li>
+          <li class="list-group-item">Set interval to use mouse clicks and keyboard input</li>
+        </ul>
+        </p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-md-4">
+        <h2>About the site</h2>
+	<p><strong>Have more time to yourself while you work from home.</strong></p>
+	<p>This will allow our system to continue to keep all applications active.</p>
+	<p>Just follow the directions in Site Usage section and you can do everything you want while appearing online to all of your co-workers.</p>
+      </div>
     </div>
-    <div>
-      <button id="fullScreenButton" type="button">Go Full Screen</button>
-    </div>
-    <div id="statusDiv"></div>
     <hr>
   </div> <!-- /container -->
 
@@ -97,6 +120,6 @@
 </footer>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+ </body>
 </html>
 

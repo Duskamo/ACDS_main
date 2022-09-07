@@ -1,18 +1,13 @@
 /* CSS files add styling rules to your content */
 
-body {
-  font-family: "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+.wakelock-content {
+  margin-left: 1em;
 }
 
-h1 {  
-  color: #373fff;
+.lg-ol {
+  list-style: decimal inside;
 }
 
-div {
-  margin: 2em 1em;
-}
-
-#statusDiv {  
-  background-color: #eee;
+.lg-ol-item {
+  display: list-item;
 }
