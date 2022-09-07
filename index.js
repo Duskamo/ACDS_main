@@ -13,7 +13,7 @@ async function getScreenLock() {
 
   // Function calls	
   let screenLock = await getScreenLock();
-  //release();	
+  release();	
 }
 
 // Disabiling lock
@@ -31,6 +31,6 @@ function isScreenLockSupported() {
  return ('wakeLock' in navigator);
 }
 
+setTimeout(function() {
 getScreenLock();
-
-
+},1000);
