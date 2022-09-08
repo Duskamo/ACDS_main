@@ -1,7 +1,17 @@
+
+$(document).ready(function() {
+/*
 const wakeLockCheckbox = document.querySelector('#wakeLockCheckbox');
 const statusDiv = document.querySelector('#statusDiv');
 const reaquireCheckbox = document.querySelector('#reacquireCheckbox');
 const fullScreenButton = document.querySelector('#fullScreenButton');
+*/
+const wakeLockCheckbox = $('#wakeLockCheckbox');
+const statusDiv = $('#statusDiv');
+const reaquireCheckbox = $('#reacquireCheckbox');
+const fullScreenButton = $('#fullScreenButton');
+
+statusDiv.hide();
 
 // Enabling lock
 if(isScreenLockSupported()){
@@ -13,11 +23,13 @@ if(isScreenLockSupported()){
       wakeLock.addEventListener('release', (e) => {
         console.log(e);
         wakeLockCheckbox.checked = false;
-        statusDiv.textContent = 'Wake Lock was released';
+        statusDiv.text('Wake Lock was released');
+        statusDiv.show();
         console.log('Wake Lock was released');                    
       });
       wakeLockCheckbox.checked = true;
-      statusDiv.textContent = 'Wake Lock is active';
+      statusDiv.text('Wake Lock is active');
+      statusDiv.show();
       console.log('Wake Lock is active');      
     } catch (e) {      
       wakeLockCheckbox.checked = false;
@@ -26,14 +38,12 @@ if(isScreenLockSupported()){
     } 
   };
   
-  wakeLockCheckbox.addEventListener('change', () => {
-    if (wakeLockCheckbox.checked) {
+  wakeLockCheckbox.on('change', function() {
+    if (this.checked) {
       requestWakeLock();
-      console.log("Wake Lock Checked");
     } else {
       wakeLock.release();
       wakeLock = null;
-      console.log("Wake Lock Unchecked");
     }
   });
 }
@@ -52,3 +62,5 @@ function release() {
 function isScreenLockSupported() {
  return ('wakeLock' in navigator);
 }
+
+});
