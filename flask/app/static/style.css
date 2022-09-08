@@ -1,0 +1,17 @@
+/* CSS files add styling rules to your content */
+
+body {
+  background-image: url('bg1.png');
+}
+
+.wakelock-content {
+  margin-left: 1em;
+}
+
+.lg-ol {
+  list-style: decimal inside;
+}
+
+.lg-ol-item {
+  display: list-item;
+}
