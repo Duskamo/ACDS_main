@@ -4,7 +4,7 @@ const reaquireCheckbox = document.querySelector('#reacquireCheckbox');
 const fullScreenButton = document.querySelector('#fullScreenButton');
 
 // Enabling lock
-//if(isScreenLockSupported()){
+if(isScreenLockSupported()){
   let wakeLock = null;
   
   const requestWakeLock = async () => {
@@ -36,7 +36,7 @@ const fullScreenButton = document.querySelector('#fullScreenButton');
       console.log("Wake Lock Unchecked");
     }
   });
-//}
+}
 
 // Disabiling lock
 function release() { 
