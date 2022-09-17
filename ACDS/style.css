@@ -15,3 +15,18 @@ body {
 .lg-ol-item {
   display: list-item;
 }
+
+/*
+ * ********** Bootstrap 4 Breakpoints ***********
+ */
+
+/* Small Devices 767px and down */
+@media (max-width: 767px) {
+  h1 {
+	font-size: 1.75rem;	
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {font-size: 4rem;}	
+}
