@@ -29,6 +29,7 @@ body {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   h1 {font-size: 1.75rem;}
+  #autoclicker_img { width: 250px; height: 250px; }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
