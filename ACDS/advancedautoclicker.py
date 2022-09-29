@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_file
+from flask import Flask, render_template, send_file, request, send_from_directory
 
 app = Flask(__name__, 
             template_folder="app/templates",
@@ -12,6 +12,11 @@ def index():
 @app.route('/download')
 def download():
     return render_template('download.html')
+
+@app.route('/sitemap.xml')
+@app.route('/robots.txt')
+def static_from_root():
+    return send_from_directory(app.static_folder,request.path[1:])
 
 @app.route('/download_exe')
 def download_exe():
